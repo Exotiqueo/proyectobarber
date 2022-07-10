@@ -1,0 +1,103 @@
+body{
+    background-color: rgb(161, 234, 240);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 13px;
+}
+.cont{
+    height: 100vh;
+    width: 40%;
+    float: left;
+    background: url(../images/celeste.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form{
+    width: 370px;
+    height: 520px;
+    position: relative;
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 200px 200px 200px 200px;
+}
+.button{
+    width: 240px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #e0e0e0;
+    border-radius: 30px;
+}
+.toggle{
+    padding: 10px 22px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+}
+
+#elegir{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient( to right, rgba(63, 81, 181, 0.7), rgba(0, 188, 212, 0.7));
+    border-radius: 30px;
+    transition: 0.8s;
+}
+.input{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.8s;
+}
+
+.input2{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #004d40;
+    outline: none;
+    background: transparent;
+}
+
+.submit{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient( to right, rgba(63, 81, 181, 0.7), rgba(0, 188, 212, 0.7) );
+    border: 0px;
+    outline: none;
+    border-radius: 30px;
+}
+.checkbox{
+    margin:30px 10px 30px 0;
+}
+span{
+    color: #757575;
+    font-size: 12px;
+    bottom: 64px;
+    position: absolute;
+}
+#login{
+    left: 450px;
+}
+#registrar{
+    left: 450px;
+}
+.fonfull{
+    width: 60%;
+    height: 100vh;
+    background: url(../images/barber.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}
