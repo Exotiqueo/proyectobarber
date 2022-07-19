@@ -1,3 +1,6 @@
+<?php 
+include 'conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,46 +140,37 @@
             <!------------------Final de los insights----------->
 
             <div class="recent-orders"><br>
-              <h2>Ordenes Recientes</h2>
+              <h2>Usuarios</h2>
               <table>
                 <thead>
                   <tr>
-                    <th>Nombres de productos</th>
-                    <th>Nombres de productos</th>
-                    <th>Payment</th>
-                    <th>status</th>
+                    <th>ID</th>
+                    <th>Nombres de Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Email</th>
+                    <th>Contacto</th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Fodable Mini Drone</td>
-                    <td>85631</td>
-                    <td>Due</td>
-                    <td class="warning">Pending</td>
-                    <td class="primary">Details</td>
-                  </tr>
-                  <tr>
-                    <td>Fodable Mini Drone</td>
-                    <td>85631</td>
-                    <td>Due</td>
-                    <td class="warning">Pending</td>
-                    <td class="primary">Details</td>
-                  </tr> 
-                  <tr>
-                    <td>Fodable Mini Drone</td>
-                    <td>85631</td>
-                    <td>Due</td>
-                    <td class="warning">Pending</td>
-                    <td class="primary">Details</td>
-                  </tr> 
-                  <tr>
-                    <td>Fodable Mini Drone</td>
-                    <td>85631</td>
-                    <td>Due</td>
-                    <td class="warning">Pending</td>
-                    <td class="primary">Details</td>
-                  </tr>
+                <?php
+
+$sql= "SELECT * FROM `usuario`";
+$result=mysqli_query($conec, $sql);
+
+while($filas=mysqli_fetch_assoc($result))
+{
+    echo "<tr>";
+        echo "<td>"; echo $filas['Id_usuario']; echo "</td>";
+        echo "<td>"; echo $filas['Nombre_usuario']; echo "</td>";
+        echo "<td>"; echo $filas['Contraseña_usuario']; echo "</td>";
+        echo "<td>"; echo $filas['Email_usuario']; echo "</td>";
+        echo "<td>"; echo $filas['Contacto_u']; echo "</td>";
+        echo "<td> <a href='modificar.php?Id_usuario=".$filas['Id_usuario']."'><button class='boton' type='button'>Modificar</button></a> </td>";
+        echo "<td> <a href='eliminar.php?Id_usuario=".$filas['Id_usuario']."''><button class='boton' type='button'>Eliminar</button></a> </td>"; 
+    echo "</tr>";
+}
+ ?>
                 </tbody>
               </table>
               <a href="#">Show All</a>
@@ -195,7 +189,7 @@
             </div>
             <div class="profile">
               <div class="info">
-                <p>Hola, <b>Derek</b></p>
+                <p>Hola, <b>Exotico</b></p>
                 <small class="text-muted">Admin</small>
               </div>
               <div class="profile-photo">

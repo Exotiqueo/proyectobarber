@@ -11,7 +11,7 @@ $inicio3=mysqli_query($conec, $jefe);
 $admimi=mysqli_num_rows($inicio3);
 
 if($admimi){
-  header("location: administrador.html");
+  header("location: administrador.php");
 }
 else{
 
